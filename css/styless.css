@@ -352,3 +352,24 @@ li{
 .campo__field--textarea{
     height: 20rem;
 }
+
+
+@media (max-width: 765px ){
+    .formulario{
+        margin-top: -5rem;
+        padding: 0;
+    }
+    .campo{
+        padding: 2rem;
+    }
+    .campo__field{
+        margin-left: 1rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 280px ){
+    .campo__field{
+        width: 90%;
+    }
+}
