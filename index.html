@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--PREFETCH CARGAR MAS RAPIDO LA PAGINA MAS CONCURRIDA-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+    <!--PRELOAD CARGAR ELEMENTOS ANTES -->
+    <link rel="preload" href="./utilidades/normalize.css" as="style">
     <link rel="stylesheet" href="./utilidades/normalize.css">
+    <link rel="preload" href="./css/styless.css" as="style">
     <link rel="stylesheet" href="./css/styless.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap" as="font" crossorigin="crossorigin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap">
+    <link rel="preload" href="img/blog1.jpg" as="image">
     <title>Blog de Cafe</title>
 </head>
 <body>
@@ -38,34 +45,43 @@
             <h3>Nuestro Blog</h3>
             <article class="entrada">
                 <div class="entrada__blog">
-                    <img src="./img/blog1.jpg" alt="imagen_blog">
+                    <picture>   <!--soporta diferentes imagenes, si la soporta carga esto-->
+                        <source srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog1.jpg" alt="imagen_blog"> <!--lo soportan todos-->
+                    </picture>
                 </div>
                     <div class="entrada__contenido">
                         <h4 class="no-margin">Tipos de Grano de Café</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magnam corrupti deleniti error impedit similique voluptate! At perspiciatis eveniet, repudiandae ipsam mollitia minus dignissimos quidem officia amet facere, doloremque placeat!</p>
-                        <a class="boton boton--primario" href="index.html">Leer Entrada</a>
+                        <a class="boton boton--primario" href="entrada.html">Leer Entrada</a>
                     </div>
             </article>
 
             <article class="entrada">
                 <div class="entrada__blog">
-                    <img src="./img/blog2.jpg" alt="imagen_blog">
+                    <picture>   <!--soporta diferentes imagenes, si la soporta carga esto-->
+                        <source srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog2.jpg" alt="imagen_blog">
+                    </picture>
                 </div>
                     <div class="entrada__contenido">
                         <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magnam corrupti deleniti error impedit similique voluptate! At perspiciatis eveniet, repudiandae ipsam mollitia minus dignissimos quidem officia amet facere, doloremque placeat!</p>
-                        <a class="boton boton--primario" href="index.html">Leer Entrada</a>
+                        <a class="boton boton--primario" href="entrada.html">Leer Entrada</a>
                     </div>
             </article>
 
             <article class="entrada">
                 <div class="entrada__blog">
-                    <img src="./img/blog3.jpg" alt="imagen_blog">
+                    <picture>   <!--soporta diferentes imagenes, si la soporta carga esto-->
+                        <source srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="./img/blog3.jpg" alt="imagen_blog">
+                    </picture>
                 </div>
                     <div class="entrada__contenido">
                         <h4 class="no-margin">Beneficios del Café</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magnam corrupti deleniti error impedit similique voluptate! At perspiciatis eveniet, repudiandae ipsam mollitia minus dignissimos quidem officia amet facere, doloremque placeat!</p>
-                        <a class="boton boton--primario" href="index.html">Leer Entrada</a>
+                        <a class="boton boton--primario" href="entrada.html">Leer Entrada</a>
                     </div>
             </article>
         </main>

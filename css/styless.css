@@ -56,6 +56,10 @@ img{
     max-width: 100%;
 }
 
+li{
+    list-style: none;
+}
+
 /*utilidades*/
 
 .no-margin{
@@ -165,6 +169,7 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width:768px){
@@ -175,6 +180,10 @@ img{
 
 .cursos{
     list-style: none;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 .boton--primario{
@@ -213,4 +222,127 @@ img{
 .footer .barra{
     margin-top: 1rem;
     padding-top: 0;
+}
+
+/*sobre_nosotros*/
+
+@media (min-width: 768px){
+
+    .sobre_nosotros{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap:2rem;
+    }
+
+    /*ALTERNARITVAS A ESTO*/
+    /*
+    .sobre_nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sobre_nosotros__imagen,
+    .sobre_nosotros__texto{
+        flex-basis: calc(50% - 1rem);       width
+    }
+    .sobre_nosotros{
+        display:grid;
+        grid-template-columns: repeat(2,1fr--50%);
+        column-gap:2rem;
+    }
+
+    .sobre_nosotros__imagen{    
+        flex:2;  factor de crecimineto
+    }
+
+    .sobre_nosotros__texto{
+        flex:1;   factor de crecimineto
+    }
+
+    */
+}
+
+
+/*cursos*/
+
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+.curso:last-of-type{
+    border: none;
+}
+
+@media (min-width: 768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    .curso__descripcion{
+        line-height: 2.7rem;
+    }
+}
+
+.curso__label{
+    font-family: var(--fuente-Heading);
+    font-weight: bold;
+}
+
+.curso__informacion{
+    font-weight: 400;
+}
+
+.curso__label,
+.curso__informacion{
+    font-size: 2rem;
+}
+
+
+/*ENTRADA*/
+
+@media (min-width: 768px){
+    .blog{
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+}
+
+
+/*CONTACTO*/
+
+.contacto-bd{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    border-radius: 5px;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.campo__label{
+    flex:0 0 9rem;  /*no crece ni se achica pero su tamaño es 9rem*/
+    text-align: right;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+    height: 20rem;
 }
