@@ -75,10 +75,16 @@ li{
 }
 
 /*codigo*/
+/*html puede solo porque tiene picture pero css no tiene condicional*/
+.webp .header{  /*si modernizer soporta*/
+    background-image: url(../img/banner.webp);
+}
 
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
 
 .header {
-    background-image: url(../img/banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; /*↨⇆*/
